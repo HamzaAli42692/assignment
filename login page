@@ -1,0 +1,84 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View ,Image, Pressable } from 'react-native';
+import logo from './assets/saly.png';
+
+
+
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.containerLogo}>
+      <Image source = {logo} style={{ width: 300, height: 400}} />
+      </View>
+      <Text style={styles.h1} >Discover Your Own Dream House</Text>
+      <Text style={styles.p} >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</Text>
+      <View style={styles.buttonContainer}>
+     <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
+     <Pressable style={[styles.button,{marginRight:'10px',backgroundColor:'#f89aee'}]} onPress={onPress1}>
+      <Text style={styles.text}>{title1}</Text>
+    </Pressable>
+    <Pressable style={[styles.button,{backgroundColor:'#f3f3f3'}]} onPress={onPress2}>
+      <Text style={[styles.text,{color:'black'}]}>{title2}</Text>
+    </Pressable>
+       </View>
+   
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerLogo: {
+    marginLeft: 10,
+    marginRight: 10,
+    backgroundColor: '#f89aee',
+    borderWidth: 5,
+    borderColor: "white",
+    borderRadius: 40,
+  },
+  h1: {
+    marginTop: 15,
+    marginLeft: 15,
+    marginRight: 15,
+    color: '#464444',
+    fontSize: 30,
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontWeight: "bold",
+  },
+  p: {
+    marginLeft: 15,
+    marginRight: 15,
+    padding: 20,
+    color: '#464444',
+    fontSize: 12,
+    justifyContent: 'center',
+    textAlign: 'center',
+  },
+  buttonContainer:{
+    marginTop:20,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
+  },
+});
