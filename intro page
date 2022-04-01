@@ -1,0 +1,152 @@
+import { StatusBar } from 'expo-status-bar';
+import {TouchableOpacity, StyleSheet, Text, View ,Image,Button, TextInput} from 'react-native';
+export default function Login() {
+  return (
+    <View style={styles.container}>
+     
+     <Text style={styles.h1}>Welcome back</Text>
+     <Text style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</Text>
+     <View style={styles.inputView}>
+  <TextInput
+    style={styles.TextInput}
+    placeholder="Email."
+    placeholderTextColor="#003f5c"
+    onChangeText={(email) => setEmail(email)}
+  />
+</View>
+ 
+<View style={styles.inputView}>
+  <TextInput
+    style={styles.TextInput}
+    placeholder="Password."
+    placeholderTextColor="#003f5c"
+    secureTextEntry={true}
+    onChangeText={(password) => setPassword(password)}
+  />
+</View>
+    
+     <View style={styles.f}>
+     <Text >forgot password?</Text>
+     <TouchableOpacity>
+            <View style={styles.btn1}>
+            <Button color={'#f194ff'} title='Sign in'>   
+            </Button>
+            </View>
+            
+         </TouchableOpacity>
+           <View style={{flex: 1, flexDirection: 'row'}}>
+             <Text style={styles.l}>_____</Text>
+             <Text style={styles.p2}> or sign up with </Text>
+             <Text style={styles.l}>_____</Text>
+           </View>
+           
+  </View>
+
+  <View style= {{flex: 1, flexDirection: 'row'}}>
+        <Image style={styles.img} source = {require('./assets/Google logo.png')} />
+        <Image style={styles.img} source = {require('./assets/Facbook.png')} />
+        <Image style={styles.img} source = {require('./assets/Group.png')} />
+        
+     </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  
+    container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 550,
+    marginRight: 550,
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 30,
+    borderWidth: 3,
+    height:22,
+    borderColor: '#fff',
+  },
+  container2: {
+    backgroundColor: '#F9B4F6',
+    width: 330, 
+    height: 400,
+    borderRadius: 50,
+    borderWidth: 20,
+    borderColor: '#fff',
+  },
+  h1: {
+    paddingTop: 20,
+    paddingLeft:50,
+    paddingBottom:20,
+    paddingRight:50,
+    color: '#464444',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  p: {
+    paddingLeft:50,
+    paddingRight:50,
+    fontSize: 12,
+    textAlign: 'center',
+  },
+  container3: {
+    backgroundColor: '#f89aee',
+    width: 400, 
+    height: 500,
+    borderRadius: 30,
+    borderWidth: 3,
+    borderColor: '#fff',
+  },
+  btn1:{
+    backgroundColor:'#f89aee',
+    width: 300  , 
+    height: 30,
+    borderRadius: 50,
+    color:'#f194ff',
+    textAlign:'center',
+    marginTop:10
+  },
+  inputView: {
+    backgroundColor: "#F2F1F0",
+    borderRadius: 30,
+    width: "70%",
+    height: 45,
+    marginBottom: 10,
+    alignItems: "center",
+    marginTop:10
+  },
+  
+  TextInput: {
+    height: 50,
+    flex: 1,
+    padding: 10,
+    marginLeft: 20,
+  },
+f:{
+  marginBottom:20,
+    fontSize: 12,
+textAlign:'right'
+},
+l:{
+  color:'pink',
+  fontWeight:'bold',
+  fontSize:30,
+  marginLeft:15
+},
+p2:
+{
+  marginTop:10,
+  fontSize:18,
+  textAlign:'center'
+},
+img:{
+borderRadius:50,
+width:20,
+height:20,
+borderRadius:50,
+margin:10
+}
+})
